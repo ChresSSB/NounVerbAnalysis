@@ -1,0 +1,9 @@
+The system must interface with medical imaging devices from a variety of manufacturers. This means that the system must handle proprietary interfaces and image formats, the older ACR-NEMA specification, and the current DICOM standard.  This variety of interfaces specifies different hardware, communication protocols and image formats.
+The system does not control the imaging devices. This is done by the imaging device's own controller. The system will accept images from the imaging devices and allow the user to organize the image storage within the M-PACS.
+Internally, the system will store images using the DICOM standard.
+The system must be able to associate patient information, such as name, age, primary diagnosis, etc., with individual images. This information will be entered at the M-PACS.
+The system must allow the user to group multiple images together to form a study and put multiple studies together as a larger study.
+The system must maintain access control for three classes of user: technician, physician, and administrator. The exact access to be allowed each user class is still under discussion by the IMS marketing group.
+The system must allow the user to retrieve and display images and studies.
+The system must allow the user to perform image manipulations such as window/level, bone enhancement, and false coloring. The system should provide for easy extension to the image manipulation toolbox as new algorithms are developed. Note: the algorithms have different implementations for different medical imaging modalities. Manipulations can be done on individual images or on an entire study.
+The marketing group expects the need for the M-PACS to interface to a dictation and transcription system that IMS is also developing. This will allow reduced resolution images to be inserted into reports.

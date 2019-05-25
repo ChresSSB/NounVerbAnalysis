@@ -1,0 +1,17 @@
+This system tracks the inventory in individual Wegmans supermarkets and determines the product that will be shipped to each store. The system has the following requirements:
+
+1. Information is received in real-time from each store to indicate what is being sold.
+
+2. The communication between the distribution center and each individual store is handled by a communications front-end executes an inventory exchange protocol. This protocol is best described by an event-driven state machine. The system handles several types of protocols because they unfortunately have not yet standardized on a single uniform protocol.
+
+3. As output, all the protocols generate what are known as product inventory events. There are several different types of product inventory events.
+
+4. Multiple clients want to be alerted when these events occur. For this design you will need to alert the store tracking client which keeps track of the inventory on the shelves in the individual stores. Be sure that the design can easily handle a variable number of other clients who want to receive alerts also.
+
+5. The inventory system maintains product information data structures that are internal to the program. In the inventory structure, products are grouped into product families. Families can be nested to an arbitrary depth. The product categories are known to stay relatively stable.
+
+6. There are several operations that the managers like to perform on the store inventory, such as, find lowest in stock, find overstocked items to put on sale, create truck loading inventory.
+
+7. The managers will also sometimes perform “what-if” operations on the inventory. Starting with the current inventory the distribution manager will create a promotional sale and through simulation “run it over” the inventory to see the effect on the inventory.
+
+8. For each promotion the distribution manager will select one of several standard sales prediction algorithms.

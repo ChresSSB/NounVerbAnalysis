@@ -1,0 +1,9 @@
+This subsystem has the overall responsibility for coordinating updates in the server for a multi-player game network. Players connect through several different connection mechanisms, i.e. http through a browser, from a game console, and from a phone app. Each of those connection mechanisms requires a different approach for the server to communicate with the player's endpoint.
+
+In this game, each player can:
+
+view his or her immediate surroundings in the game's virtual world,
+interact with other players in the field of view,
+see summary information about the opposing players in the game, and
+make game moves based on all of the available knowledge.
+If an opposing player enters a player's field of view, this will be shown visually to the player. Players can join or depart at any time during the game. As players join, depart, and make moves in the game, the server must update all current players with the new game information.
